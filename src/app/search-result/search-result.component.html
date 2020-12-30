@@ -1,0 +1,28 @@
+<div class="search-result">
+  <h1>{{ searchedCategory.name }}</h1>
+  <p class="description">{{ searchedCategory.description }}</p>
+  <div>
+    <div class="search-item" *ngFor="let item of items">
+      <a *ngIf="item.itemMedia.length == 0" href="#"><img  src="https://picsum.photos/150" alt="search-item" /></a>
+      <a *ngIf="item.itemMedia.length > 0" href="#"><img width="150" height="150" [src]="cdnUrl + item.itemMedia[0].path" alt="search-item" /></a>
+      <div class="stars">
+        <a href="#"><h2>{{ item.name }}</h2></a>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <a class="rating" href="#">(0)</a>
+     
+      
+      <p>{{ item.description }}</p>
+    </div>
+      <div class="buy">
+      <p>{{ item.basePrice }} EUR</p>
+      <button class="btn btn-lg"><i class="fa fa-shopping-basket"></i></button>
+      <button class="btn btn-lg"><i class="fa fa-heart"></i></button>
+    </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

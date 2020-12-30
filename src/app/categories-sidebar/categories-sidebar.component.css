@@ -1,0 +1,11 @@
+#categories {
+    height: 100%;
+    background-color: #929aab;
+}
+#categories h2 {
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+#categories img {
+    width: 70%;
+}
