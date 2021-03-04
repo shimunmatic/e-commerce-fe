@@ -2,6 +2,7 @@ export interface Item {
     id: number;
     name: string;
     description: string;
+    thumbnail: string;
     basePrice: number;
     categoryId: number;
     variants: any[];

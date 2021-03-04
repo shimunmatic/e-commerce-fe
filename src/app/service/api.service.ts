@@ -17,8 +17,8 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  getAllCategories(): Observable<Category[]> {
-    return this.http.get<Category[]>(`${this.url}/api/item/v1/categories`);
+  getAllCategories(): Observable<ResponseObject<Category[]>> {
+    return this.http.get<ResponseObject<Category[]>>(`${this.url}/api/item/v1/categories`);
   }
 
   getItemsForCategory(categoryId: number): Observable<ResponseObject<PageableContent<Item>>> {

@@ -13,7 +13,7 @@ export class CategoriesSidebarComponent implements OnInit {
 
   constructor(private apiService: ApiService, private router: Router) {
     apiService.getAllCategories().subscribe(data=>{
-      this.categories = data;
+      this.categories = data.data;
     });
   }
 

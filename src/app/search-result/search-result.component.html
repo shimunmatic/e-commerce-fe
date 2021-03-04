@@ -3,8 +3,8 @@
   <p class="description">{{ searchedCategory.description }}</p>
   <div>
     <div class="search-item" *ngFor="let item of items">
-      <a *ngIf="item.itemMedia.length == 0" href="#"><img  src="https://picsum.photos/150" alt="search-item" /></a>
-      <a *ngIf="item.itemMedia.length > 0" href="#"><img width="150" height="150" [src]="cdnUrl + item.itemMedia[0].path" alt="search-item" /></a>
+      <a *ngIf="!item.thumbnail" href="#"><img  src="https://picsum.photos/150" alt="search-item" /></a>
+      <a *ngIf="item.thumbnail" href="#"><img width="150" height="150" [src]="cdnUrl + item.thumbnail" alt="search-item" /></a>
       <div class="stars">
         <a href="#"><h2>{{ item.name }}</h2></a>
         <span class="fa fa-star checked"></span>
